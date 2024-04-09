@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `parejas` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `parejas`;
+CREATE DATABASE  IF NOT EXISTS `asignaturas` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `asignaturas`;
 -- MariaDB dump 10.19  Distrib 10.6.16-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: 127.0.0.1    Database: parejas
+-- Host: 127.0.0.1    Database: asignaturas
 -- ------------------------------------------------------
 -- Server version	8.3.0
 
@@ -18,24 +18,28 @@ USE `parejas`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `pareja`
+-- Table structure for table `Asignaturas`
 --
 
-DROP TABLE IF EXISTS `pareja`;
+DROP TABLE IF EXISTS `Asignaturas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pareja` (
-  `codasig` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `Asignaturas` (
+  `codAsignatura` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `horas` int DEFAULT NULL,
+  PRIMARY KEY (`codAsignatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `pareja`
+-- Dumping data for table `Asignaturas`
 --
 
-LOCK TABLES `pareja` WRITE;
-/*!40000 ALTER TABLE `pareja` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pareja` ENABLE KEYS */;
+LOCK TABLES `Asignaturas` WRITE;
+/*!40000 ALTER TABLE `Asignaturas` DISABLE KEYS */;
+INSERT INTO `Asignaturas` VALUES (1,'Programacionnnnnnnnnnnnnnnnn',801),(2,'Entornos',3),(3,'Ingles',1),(16,'Messi',10),(17,'odhfo',100);
+/*!40000 ALTER TABLE `Asignaturas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-09 18:12:35
+-- Dump completed on 2024-04-09 18:43:18
